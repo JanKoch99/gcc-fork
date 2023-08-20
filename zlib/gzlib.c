@@ -202,7 +202,7 @@ local gzFile gz_open(path, fd, mode)
         free(state);
         return NULL;
     }
-#ifdef WIDECHAR MC2
+#ifdef MC3
     if (fd == -2)
         if (len)
             wcstombs(state->path, path, len + 1);
